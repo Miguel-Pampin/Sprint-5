@@ -1,42 +1,38 @@
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
  
 
-body {
-  background-image:src="/img/scn.jpg";
+.container{
+  background-color: rgb(207, 131, 31);
   font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+
+  margin: 20px;
   padding: 20px;
+
+
 }
 
-.container {
-  background-color: #fff;
+.box {
+  background-color: rgb(95, 237, 79);
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-  padding: 50px 20px;
+  padding: 3em 2em;
+  width: 60em;
   text-align: center;
-  max-width: 100%;
-  width: 800px;
-justify-content: center;
 }
 
-h3 {
+h2 {
   margin: 0;
   opacity: 0.5;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .joke {
-  font-size: 30px;
+  font-size: 2em;
   letter-spacing: 1px;
   line-height: 40px;
-  margin: 50px auto;
-  max-width: 600px;
+  margin: 2em auto;
+  max-width: 50em;
 }
 
 .btn {
@@ -48,6 +44,7 @@ h3 {
   padding: 14px 40px;
   font-size: 16px;
   cursor: pointer;
+
 }
 
 .btn:active {
@@ -55,5 +52,5 @@ h3 {
 }
 
 .btn:focus {
-  outline: 0;
+  outline: 2;
 }
