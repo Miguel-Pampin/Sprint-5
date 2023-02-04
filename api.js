@@ -1,21 +1,17 @@
-const jokeEl = document.getElementById('joke')
-const jokeBtn = document.getElementById('jokeBtn')
-
-jokeBtn.addEventListener('click', generateJoke)
-
-generateJoke()
-
-// USING ASYNC/AWAIT
+let jokeEl = document.getElementById('joke');
+let jokeBtn = document.getElementById('jokeBtn');
+jokeEl.style.visibility = "hidden";
+jokeBtn.addEventListener('click', generateJoke);
+jokeEl.style.visibility = "visible";
 async function generateJoke() {
-  const config = {
+  let config = {
     headers: {
       Accept: 'application/json',
     },
-  }
-
-  const res = await fetch('https://icanhazdadjoke.com', config)
-
-  const data = await res.json()
-
-  jokeEl.innerHTML = data.joke
+  };
+  let file = await fetch('https://icanhazdadjoke.com', config);
+  let data = await file.json();
+  console.log(data.joke);
+  /* jokeEl.innerHTML = data.joke; */
+  jokeBtn.innerHTML="Get another joke";
 }
