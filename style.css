@@ -1,20 +1,26 @@
- .container {
+ body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  }
 
+ .container {
    background-image: url("./img/scn.jpg");
-   background-size: cover;
+   background-size:cover;
+   height: 100vh;
+   width: 100%;
    background-attachment: fixed;
    background-repeat: no-repeat;
    overflow: hidden;
    display: flex;
-   height: 100vh;
-   width: 100%;
  }
 
  .box {
    background-color: rgb(95, 237, 79);
    border-radius: 10px;
    box-shadow: 0 10px 20px rgba(233, 171, 171, 0.2), 0 6px 6px rgba(223, 46, 23, 0.986);
-   padding: 0.5em 1em;
+   padding: 0.2em 0,2em;
    width: 50em;
    height: auto;
    margin: auto;
@@ -45,6 +51,14 @@
    padding: 1em;
    font-size: 1em;
    cursor: pointer;
+ }
+
+ .btn1{
+  background-color: transparent;
+  font-size: 3em;
+  border:none;
+  margin-bottom: 0.5em;
+  cursor: pointer;
  }
 
  .btn:active {

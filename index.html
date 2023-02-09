@@ -11,10 +11,16 @@
 
 <body>
     <div class="container">
-
         <div class="box">
             <h2>Daily Laugh </h2>
             <div id="joke" class="joke"> </div>
+            <div class="scoreButtons" id="scoreButtons" style="display: none;">
+                <div class="score">
+                    <button class="btn1" type="button" onclick="getPoints(1)">😢</button>
+                    <button class="btn1" type="button" onclick="getPoints(2)">😊</button>
+                    <button class="btn1" type="button" onclick="getPoints(3)">😂</button>
+                </div>
+            </div>
             <button id="jokeBtn" class="btn">Get a Joke</button>
         </div>
     </div>
