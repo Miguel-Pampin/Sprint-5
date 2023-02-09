@@ -12,6 +12,6 @@ async function generateJoke() {
   let file = await fetch('https://icanhazdadjoke.com', config);
   let data = await file.json();
   console.log(data.joke);
-  /* jokeEl.innerHTML = data.joke; */
+  jokeEl.innerHTML = data.joke;
   jokeBtn.innerHTML="Get another joke";
 }
