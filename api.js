@@ -42,28 +42,48 @@ jokeBtn.addEventListener("click", generateJoke);
 jokeEl.style.visibility = "visible";
 function generateJoke() {
     return __awaiter(this, void 0, void 0, function () {
-        var config, file, data, scoreButton;
+        var resultado, arrayJokes, randomJokes, scoreButton, err_1;
+        var _this = this;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    config = {
-                        headers: {
-                            Accept: "application/json"
-                        }
-                    };
-                    return [4 /*yield*/, fetch("https://icanhazdadjoke.com", config)];
+                    _a.trys.push([0, 2, , 3]);
+                    return [4 /*yield*/, Promise.all([
+                            fetch('https://icanhazdadjoke.com', {
+                                headers: {
+                                    Accept: 'application/json'
+                                }
+                            }).then(function (value) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0: return [4 /*yield*/, value.json()];
+                                    case 1: return [2 /*return*/, _a.sent()];
+                                }
+                            }); }); }),
+                            fetch('https://api.chucknorris.io/jokes/random').then(function (value) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0: return [4 /*yield*/, value.json()];
+                                    case 1: return [2 /*return*/, _a.sent()];
+                                }
+                            }); }); }),
+                        ])];
                 case 1:
-                    file = _a.sent();
-                    return [4 /*yield*/, file.json()];
-                case 2:
-                    data = _a.sent();
-                    console.log(data.joke);
+                    resultado = _a.sent();
+                    arrayJokes = [];
+                    arrayJokes[0] = resultado[0].joke.toString();
+                    arrayJokes[1] = resultado[1].value.toString();
+                    randomJokes = arrayJokes[Math.floor(Math.random() * arrayJokes.length)];
+                    console.log(randomJokes);
                     jokeBtn.innerHTML = "Get another joke";
                     scoreButton = document.getElementById("scoreButtons");
                     scoreButton.style.display = "";
                     // Ejercicio 2
-                    jokeEl.innerHTML = data.joke;
-                    return [2 /*return*/];
+                    jokeEl.innerText = randomJokes;
+                    return [3 /*break*/, 3];
+                case 2:
+                    err_1 = _a.sent();
+                    console.log('Error', err_1);
+                    return [3 /*break*/, 3];
+                case 3: return [2 /*return*/];
             }
         });
     });

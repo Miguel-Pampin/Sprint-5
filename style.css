@@ -1,28 +1,29 @@
- body{
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  }
+ body {
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
 
  .container {
    background-image: url("./img/scn.jpg");
-   display:flex;
+   display: flex;
    flex-flow: row wrap;
-   justify-content:center;
+   justify-content: center;
    width: 100vw;
    height: 100vh;
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-   
-    }
+
+ }
 
  .box {
    background-color: rgb(95, 237, 79);
    border-radius: 10px;
    box-shadow: 0 10px 20px rgba(233, 171, 171, 0.2), 0 6px 6px rgba(223, 46, 23, 0.986);
-   padding: 0.2em 0,2em;
+   padding: 0.2em 0, 2em;
    width: 50em;
    height: auto;
    margin: auto;
@@ -56,12 +57,12 @@
    cursor: pointer;
  }
 
- .btn1{
-  background-color: transparent;
-  font-size: 3em;
-  border:none;
-  margin-bottom: 0.2em;
-  cursor: pointer;
+ .btn1 {
+   background-color: transparent;
+   font-size: 3em;
+   border: none;
+   margin-bottom: 0.2em;
+   cursor: pointer;
  }
 
  .btn:active {
@@ -71,16 +72,14 @@
  .btn:focus {
    outline: 2;
  }
- .weather-container{
-  background-color: #ffffff68;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1em;
-  padding: auto;
-  position:fixed;
-  border-radius:15px;
- ;
-}
 
+ .weather-container {
+   background-color: #ffffff68;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 1em;
+   padding: auto;
+   position: fixed;
+   border-radius: 15px;
+ }
