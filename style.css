@@ -7,14 +7,16 @@
 
  .container {
    background-image: url("./img/scn.jpg");
-   background-size:cover;
+   display:flex;
+   flex-flow: row wrap;
+   justify-content:center;
+   width: 100vw;
    height: 100vh;
-   width: 100%;
-   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
    background-repeat: no-repeat;
-   overflow: hidden;
-   display: flex;
- }
+   
+    }
 
  .box {
    background-color: rgb(95, 237, 79);
@@ -29,7 +31,7 @@
 
  h2 {
    margin: 0;
-   opacity: 0.5;
+   opacity: 0.8;
    letter-spacing: 2px;
    text-align: center;
  }
@@ -49,6 +51,7 @@
    border-radius: 10px;
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
    padding: 1em;
+   margin-bottom: 0.5em;
    font-size: 1em;
    cursor: pointer;
  }
@@ -57,7 +60,7 @@
   background-color: transparent;
   font-size: 3em;
   border:none;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   cursor: pointer;
  }
 
@@ -68,3 +71,16 @@
  .btn:focus {
    outline: 2;
  }
+ .weather-container{
+  background-color: #ffffff68;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  padding: auto;
+  position:fixed;
+  border-radius:15px;
+ ;
+}
+

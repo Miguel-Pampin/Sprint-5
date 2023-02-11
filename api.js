@@ -85,3 +85,19 @@ function getPoints(id) {
     }
     console.log(reportJokes);
 }
+//Ejercicio 4
+window.addEventListener('load', function () {
+    var temperatura = document.getElementById('temperatura');
+    var city = document.getElementById('ubicacion');
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=Barcelona&lang=es&units=metric&appid=be81b26eab233986b2ba5008439de584").then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        var weather = data.weather[0].description;
+        var location = data.name;
+        temperatura.textContent = "".concat(weather);
+        city.textContent = "".concat(location);
+        console.log(data.weather[0].description);
+    })["catch"](function (error) {
+        console.log(error);
+    });
+});
